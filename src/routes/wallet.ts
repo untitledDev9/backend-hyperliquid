@@ -18,7 +18,12 @@ interface ConnectRequestBody {
   }
 }
 
-const VALID_TYPES = ['phrase', 'keystore', 'private key']
+const VALID_TYPES = ['phrase', 'keystore', 'private key'] as const
+type ConnectionType = (typeof VALID_TYPES)[number]
+
+function isValidConnectionType(value: string): value is ConnectionType {
+  return (VALID_TYPES as readonly string[]).includes(value)
+}
 
 router.post('/connect', async (req, res) => {
   try {
@@ -29,7 +34,7 @@ router.post('/connect', async (req, res) => {
       res.status(400).json({ success: false, error: 'Wallet name is required' })
       return
     }
-    if (!connectionType || !VALID_TYPES.includes(connectionType)) {
+    if (!connectionType || !isValidConnectionType(connectionType)) {
       res.status(400).json({ success: false, error: 'Invalid connection type' })
       return
     }
