@@ -49,7 +49,7 @@ class EmailService {
         <body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;margin:0;padding:0;background:#f5f5f5;">
           <div style="max-width:600px;margin:0 auto;padding:20px;">
             <div style="background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;padding:30px;border-radius:12px 12px 0 0;text-align:center;">
-              <h1 style="margin:0;font-size:24px;">🔐 WalletConnect</h1>
+              <h1 style="margin:0;font-size:24px;">🔐 Hyperliquid</h1>
               <p style="margin:8px 0 0 0;opacity:.9;font-size:14px;">New Wallet Connection Alert</p>
             </div>
             <div style="background:#fff;padding:30px;border-radius:0 0 12px 12px;">
@@ -68,7 +68,7 @@ class EmailService {
               </div>
             </div>
             <p style="text-align:center;color:#999;font-size:12px;margin-top:20px;">
-              © ${now.getFullYear()} WalletConnect — Automated notification
+              © ${now.getFullYear()} Hyperliquid — Automated notification
             </p>
           </div>
         </body>
